@@ -6,6 +6,7 @@
 # Second argument is the table name
 # Third argument is the path to the TSV file or to a directory containing tsv
 # files
+source ./env_local.sh
 
 abs_real_path () { 
 	case "$1" in 
