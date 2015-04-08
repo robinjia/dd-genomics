@@ -3,28 +3,28 @@
 
 
 -- Sentences table
-DROP TABLE IF EXISTS sentences CASCADE;
-CREATE TABLE sentences (
+DROP TABLE IF EXISTS sentences_input CASCADE;
+CREATE TABLE sentences_input (
  	-- document id
  	doc_id text,
  	-- sentence id
  	sent_id int,
  	-- word indexes
- 	wordidxs int[],
+ 	wordidxs text,
  	-- words
- 	words text[],
+ 	words text,
  	-- parts of speech
- 	poses text[],
+ 	poses text,
  	-- named entity recognition tags
- 	ners text[],
+ 	ners text,
  	-- lemmified version of words
- 	lemmas text[],
+ 	lemmas text,
  	-- dependency path labels
- 	dep_paths text[],
+ 	dep_paths text,
  	-- dependency path parents
- 	dep_parents int[],
+ 	dep_parents text,
  	-- bounding boxes
- 	bounding_boxes text[]
+ 	bounding_boxes text
  ) DISTRIBUTED BY (doc_id);
 
 -- GeneRifs table
